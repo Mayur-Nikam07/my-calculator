@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="calculator.css">
+<div class="container">
+<div class="display">445
+</div>
+<div class="all-buttons">
+    <div class="sub-buttons" id="modulusbtn" >%</div>
+    <div class="sub-buttons" id="clearAll">CE</div>
+    <div class="sub-buttons">C</div>
+    <div class="sub-buttons">x</div>
+    <div class="sub-buttons">7</div>
+    <div class="sub-buttons">8</div>
+    <div class="sub-buttons">9</div>
+    <div class="sub-buttons">*</div>
+    <div class="sub-buttons">4</div>
+    <div class="sub-buttons">5</div>
+    <div class="sub-buttons">6</div>
+    <div class="sub-buttons">-</div>
+    <div class="sub-buttons">1</div>
+    <div class="sub-buttons">2</div>
+    <div class="sub-buttons">3</div>
+    <div class="sub-buttons">0</div>
+    <div class="sub-buttons">.</div>
+    <div class="sub-buttons">/</div>
+    <div class="sub-buttons">=</div>
+
+</div>
+</div>
+<script>
+    document.getElementById('modulusbtn').addEventListener('click',function(){
+        
+        var displayVal=document.querySelector(".display").innerHTML;
+        if(displayVal){
+            document.querySelector(".display").innerHTML=(displayVal+"%");
+        }
+    })
+    document.getElementById('clearAll').addEventListener('click',function(){
+     document.querySelector(".display").innerHTML="";
+     document.querySelector(".display").addEventListener('focus');
+    })
+</script>
